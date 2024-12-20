@@ -1,7 +1,21 @@
 <!DOCTYPE html> <!-- Denne bør være med på toppen av dokumentet, og forteller (datamaskinen) at dette er en html-fil -->
 
+<!-- 
+  OPPGAVE 1:
+  ---------------
+  Denne filen skal gi skallet på en item-side, og inneholde det du trenger av elementer. Alt som må gjøres
+  er å fylle inn fornuftige data på de riktige plassene. Kanskje du trenger å duplisere noen elementer 
+  for å få inn den informasjonen du ønsker. Kanskje du også vil prøve å legge inn et bilde, eller bytte ut
+  bildet som brukes for valuta/pris her? 
+  
+  Det som må gjøres er altså:
+  - Legge inn fornuftige data/informasjon
+  - Redigere stilfilen (den trenger desperat litt hjelp...)
+  - Eksperimentere med å legge inn ekstra innhold, som et bilde på item-et :)
+-->
+
 <!-- Her begynner html-dokumentet, som starter med <html> og slutter med </html> -->
-<html lang="nb"> <!-- lang="nb" indikerer at språket i dokumentet er norsk bokmål -->
+<html lang="en"> <!-- lang="en" indikerer at språket i dokumentet er norsk bokmål -->
 
 <!-- Her begynner html dokumentets hode (head). Denne delen inneholder meta-data om dokumentet. 
      Det kan inkludere informasjon som tittel og forfatter, lenker til stil- og skriptfiler, 
@@ -17,7 +31,7 @@
     
     <title><!-- Erstatt denne kommentaren med sidetittel --></title>
     
-    <link rel="stylesheet" href="character-sheet.css"> <!-- Dette forteller dokumentet å bruke stilene i filen 
+    <link rel="stylesheet" href="trade-item.css"> <!-- Dette forteller dokumentet å bruke stilene i filen 
                                                             character-sheet.css -->
 </head>
 
@@ -52,51 +66,66 @@
           + Her har vi brukt elementet div som eksempel, men det samme gjelder for andre elementer, som:
             <h1 class="main-header">Tittel</h1>
     -->
-    <div class="character-sheet">
-        <!-- Karakter header -->
-        <div class="character-header">
-            <h1>Character Name</h1>
-            <div class="level">Level 1</div>
-        </div>
 
-        <!-- Hoved attributter -->
-        <div class="attributes">
-            <div class="attribute str">
-                <span class="label">Strength</span>
-                <span class="value">10</span>
-            </div>
-            <div class="attribute dex">
-                <span class="label">Dexterity</span>
-                <span class="value">10</span>
-            </div>
-            <div class="attribute int">
-                <span class="label">Intelligence</span>
-                <span class="value">10</span>
-            </div>
+    <!-- Her begynner container til loot-objektet -->
+    
+    <div class="item">
+        <!-- Overskrift -->
+        <div class="header">Thing</div>
+        
+        <!-- Egenskaper -->
+        <div class="property">Trap, Critical, Spell, Projectile, Lightning</div>
+        <div class="property">Level: <span class="value">?</span></div>
+        <div class="property">Cost: <span class="value">???</span></div>
+        <div class="property">Cast Time: <span class="value">??</span></div>
+        
+        <!-- Delelinje -->
+        <div class="separator"></div>
+        
+        <!-- Egenskaper / krav  -->
+        <div class="property">
+            Requires Level <span class="value">??</span>, 
+            <span class="value">??</span> Dex, 
+            <span class="value">??</span> Int
         </div>
-
-        <!-- Defense stats -->
-        <div class="defenses">
-            <div class="defense life">
-                <span class="label">Life</span>
-                <span class="value">100</span>
-            </div>
-            <div class="defense mana">
-                <span class="label">Mana</span>
-                <span class="value">50</span>
-            </div>
-            <div class="defense shield">
-                <span class="label">Energy Shield</span>
-                <span class="value">0</span>
-            </div>
+        
+        <div class="separator"></div>
+        
+        <!-- Beskrivelse -->
+        <div class="desc">
+            Thing that does its thing.
         </div>
-
-        <!-- Karakter beskrivelse -->
-        <div class="description">
-            <p>A brave exile, ready to face the dangers of Wraeclast.</p>
+        
+        <div class="separator"></div>
+        
+        <!-- Effekt -->
+        <div class="explicit">Deals the damage</div>
+        <div class="explicit">Has cool effects</div>
+        <div class="explicit">idk</div>
+        
+        <div class="separator"></div>
+        
+        <!-- XP -->
+        <div class="property">
+            <span class="progress"><span class="progressFill" style="width: 60%;"></span></span>
+            Experience: <span class="value">120/200</span>
+        </div>
+        
+        <div class="separator"></div>
+        
+        <!-- Ca pris -->
+        <div class="itemNote textCurrency">~price TOO MUCH</div>
+        
+        <!-- Pris -->
+        <div class="price textCurrency">
+            <span>Exact Price:</span>
+            <br>
+            <div class="currencyImage">
+                <span>10000</span><span>x</span>
+                <img src="../assets/pouch.png" />
+                <span>MEga Pouches</span>
+            </div>
         </div>
     </div>
 </body>
-
-<!-- Her avsluttes html-dokumentet, som markert med </html> -->
 </html>

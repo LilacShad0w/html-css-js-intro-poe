@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'FontinSmallCaps';
-    src: url('assets/Fontin-SmallCaps.woff') format('woff');
+    src: url('../assets/Fontin-SmallCaps.woff') format('woff');
 }
 
 body {
@@ -29,7 +29,7 @@ body {
 
 .separator {
     height: 15px;
-    background-image: url('assets/separator.png');
+    background-image: url('../assets/separator.png');
     background-size: auto 10px;
     background-position: center;
     background-repeat: no-repeat;
@@ -71,9 +71,6 @@ body {
     background: #414141;
     text-align: center;
     padding: 20px;
-}
-.price:hover {
-    background-color: #1ba29b;
 }
 .currencyImage > img {
     height: 18pt;
