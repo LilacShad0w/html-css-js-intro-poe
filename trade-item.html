@@ -1,0 +1,117 @@
+<!DOCTYPE html> <!-- Denne bør være med på toppen av dokumentet, og forteller (datamaskinen) at dette er en html-fil -->
+
+<!-- Her begynner html-dokumentet, som starter med <html> og slutter med </html> -->
+<html lang="nb"> <!-- lang="nb" indikerer at språket i dokumentet er norsk bokmål -->
+
+<!-- Her begynner html dokumentets hode (head). Denne delen inneholder meta-data om dokumentet. 
+     Det kan inkludere informasjon som tittel og forfatter, lenker til stil- og skriptfiler, 
+     informasjon til søkemotorer og grunnleggende informasjon om hvordan dokumentet skal leses og vises.
+     Seksjonen starter med <head> og lukkes med </head> -->
+<head>
+    <meta charset="UTF-8"> <!-- Dette forteller at dokumentet er lagret med encoding UTF-8.
+                                Hva er UTF-8? Se: 
+                                https://www.tsmean.com/articles/encoding/unicode-and-utf-8-tutorial-for-dummies/ -->
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Denne hjelper å skalere dokumentet når
+                                                                                vist på smale skjermer (mobiltelefoner)-->
+    
+    <title><!-- Erstatt denne kommentaren med sidetittel --></title>
+    
+    <link rel="stylesheet" href="trade-item.css"> <!-- Dette forteller dokumentet å bruke stilene i filen 
+                                                            character-sheet.css -->
+</head>
+
+<!-- Her begynner selve innholdet i html-dokumentet, "kroppen" (body). Dette leses av en nettleser og vises på skjermen.
+     Delen starter med <body> og lukkes med </body> -->
+<body>
+    <!-- 
+    Nå er vi i html-kroppen, og dette er hvor vi legger inn innholdet på siden.
+        - Ikke alt skrives ut til skjermen, mye av koden under inneholder informasjon om hvordan innholdet skal
+          vises, hvilke deler som grupperes sammen og hvilke stiler som skal brukes.
+          + Alt som befinner seg mellom tegnet < og > utgjør 'tags' som definerer 'elementer'. Alle elementer åpnes
+            (starter) med <element> og lukkes (avsluttes) med </element> (der 'element' erstattes med et gyldig navn, 
+            som div eller h1)
+          + Alle elementer skal lukkes, så <...> og </...> skal alltid finnes i par.
+          + Noen spesielle elementer er selv-lukkende og skrives slik: <selvlukkende />, legg merke til /> på slutten.
+            Disse finnes ikke i par, men står alene. (eks: <img src="img.png" />)
+          + Det som er mellom <...> og </...>, utgjør elementets innhold. Innholdet kan bestå av andre HTML-elementer, 
+            men kan også være ren tekst. Tekstinnhold vil skrives ut til skjerm, formatert på bakgrunn av foreldre-elementenes
+            egenskaper og tilknyttede stiler.
+        - Elementet div er en uformatert container som brukes mye. Det står for "division", som indikerer at
+          den brukes til å dele opp innholdet i grupper. 
+        - Egenskapen 'class' brukes til å tilegne navngitte stiler og egenskaper til gruppen. Primært defineres
+          disse navngitte stilene som CSS-kode, her i filen character-sheet.css
+        - Ett element kan være knyttet til ett eller flere klassenavn. Rett under er class character-sheet, så 
+          dette elementet tilegnes egenskaper basert på én klasse (med navn character-sheet). Noen linjer under
+          har vi elementet <div class="attribute str">. Dette elementet er tilknyttet to klasser, attribute og str. 
+          Altså kan vi angi en liste av klasser slik: class="klasse1 klasse2 klasse3" (klassenavn separert av mellomrom).
+        - Flere elementer kan være knyttet til samme klasse, slik at stiler kan gjenbrukes for flere elementer.
+        - Egenskaper (properties / attributes) til et element, som class, angis i elementets 'opening tag':
+            <div prop1="prop1content1 prop1content2" prop2="prop2 content" prop3="prop3content1 prop3content2">
+          + Elementet lukkes alltid med samme 'closing tag' </div>, uavhengig av egenskaper i 'opening tag'.
+          + Her har vi brukt elementet div som eksempel, men det samme gjelder for andre elementer, som:
+            <h1 class="main-header">Tittel</h1>
+    -->
+
+    <!-- Her begynner container til loot-objektet -->
+    <div class="item">
+        <!-- Overskrift -->
+        <div class="header">Lightning Trap</div>
+        
+        <!-- Egenskaper -->
+        <div class="property">Trap, Critical, Spell, Projectile, Lightning</div>
+        <div class="property">Level: <span class="value">4</span></div>
+        <div class="property">Cost: <span class="value">10 Mana</span></div>
+        <div class="property">Cast Time: <span class="value">1.00 sec</span></div>
+        
+        <!-- Delelinje -->
+        <div class="separator"></div>
+        
+        <!-- Egenskaper / krav  -->
+        <div class="property">
+            Requires Level <span class="value">23</span>, 
+            <span class="value">25</span> Dex, 
+            <span class="value">35</span> Int
+        </div>
+        
+        <div class="separator"></div>
+        
+        <!-- Beskrivelse -->
+        <div class="desc">
+            Throws a trap that launches a ring of projectiles through the enemy that set it off, 
+            dealing lightning damage to them and subsequent targets.
+        </div>
+        
+        <div class="separator"></div>
+        
+        <!-- Effekt -->
+        <div class="explicit">Deals 37 to 111 Lightning Damage</div>
+        <div class="explicit">Trap lasts 4 seconds</div>
+        <div class="explicit">Fires 9 Projectiles</div>
+        
+        <div class="separator"></div>
+        
+        <!-- XP -->
+        <div class="property">
+            <span class="progress"><span class="progressFill" style="width: 60%;"></span></span>
+            Experience: <span class="value">120/200</span>
+        </div>
+        
+        <div class="separator"></div>
+        
+        <!-- Ca pris -->
+        <div class="itemNote textCurrency">~price 1 alch</div>
+        
+        <!-- Pris -->
+        <div class="price textCurrency">
+            <span>Exact Price:</span>
+            <br>
+            <div class="currencyImage">
+                <span>1</span><span>x</span>
+                <img src="assets/pouch.png" />
+                <span>Orb of Alchemy</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
