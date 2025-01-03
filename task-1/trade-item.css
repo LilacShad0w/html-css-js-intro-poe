@@ -9,7 +9,7 @@
 }
 
 body {
-    background: #ffacac;
+    background: #331616;
     margin: 0;
     padding: 20px;
     color: #e5ff00;
@@ -19,7 +19,7 @@ body {
     background: rgba(139, 78, 107, 0.8);
     max-width: 150px;
     margin: 0 auto;
-    padding: 0px;
+    padding: 8px;
     font-family: Arial;
     text-align: right;
 }
@@ -49,7 +49,7 @@ body {
 }
 
 .desc {
-    color: #0004ff;
+    color: #fff7ed;
 }
 
 .explicit {
